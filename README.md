@@ -1,147 +1,333 @@
 # HitMeUp
 
-**Le passioni in comune diventano un motivo per conoscersi dal vivo.**
+## 1. Il progetto
 
-## 1. Cos'è il progetto
+### Breve descrizione
 
-HitMeUp è una web app di socialità di prossimità: permette di scoprire persone vicine con cui condividere passioni e attività, come gaming, musica, sport o studio. L'obiettivo è favorire nuove amicizie e rendere più semplice iniziare una conversazione dal vivo.
+HitMeUp è un progetto scolastico di una web app per fare nuove amicizie dal vivo. L’idea è aiutare a trovare persone vicine con cui condividere un hobby, studiare o fare un’attività insieme.
+
+### Descrizione completa e contesto
+
+Usiamo i social per parlare con tante persone, ma conoscere qualcuno dal vivo può essere più difficile. A volte vorremmo fare sport o studiare in compagnia, senza sapere chi attorno a noi abbia gli stessi interessi. Anche iniziare una conversazione può creare imbarazzo, soprattutto quando non conosciamo nessuno.
+
+Da qui nasce HitMeUp. L’utente potrà creare un profilo, scrivere una breve presentazione e scegliere i suoi hobby, come musica, gaming, sport o studio. Attraverso la posizione del telefono, usata con il suo permesso, oppure un check-in manuale, potrà indicare il luogo in cui si trova. L’app cercherà altre persone vicine con almeno un interesse in comune e potrà avvisarlo quando ne trova una.
 
-L'utente crea il proprio profilo e inserisce i suoi hobby. Attraverso la geolocalizzazione del dispositivo, autorizzata dall'utente, oppure un check-in nel luogo in cui si trova, l'app individua altre persone presenti nelle vicinanze con interessi in comune. Una notifica può quindi offrire uno spunto per rompere il ghiaccio e conoscersi.
+Per esempio, uno studente in biblioteca potrebbe scoprire che un’altra persona presente lì cerca compagnia per studiare. Sapere di avere qualcosa in comune può diventare un motivo per iniziare a parlare.
 
-Per esempio, una persona che si trova in biblioteca e cerca compagnia per studiare può scoprire un altro utente presente nello stesso luogo e interessato allo studio di gruppo.
+Dopo un saluto (Wave) accettato, gli utenti potranno aprire una chat e decidere se aggiungersi agli amici. HitMeUp nasce soprattutto per trovare nuovi amici e condividere attività. L’app vuole offrire una prima occasione per conoscersi, lasciando alle persone la scelta di fare il passo successivo.
 
-### Il problema che vuole risolvere
+### Target
 
-HitMeUp nasce per affrontare due difficoltà:
+HitMeUp si rivolge a chi vuole ampliare il proprio giro di amicizie, soprattutto giovani e studenti. Può essere utile a chi è timido, a chi ha cambiato scuola o città e a chi cerca qualcuno con cui condividere una passione. I luoghi a cui pensiamo sono quelli della vita quotidiana, come biblioteche, università, palestre e spazi di ritrovo.
 
-- **Isolamento e timidezza:** utilizzare i social non significa sempre sentirsi parte di un gruppo. Incontrare persone nuove dal vivo può creare imbarazzo, soprattutto quando manca un argomento con cui iniziare.
-- **Difficoltà a trovare compagni di hobby:** chi vuole fare sport, studiare o condividere una passione spesso non sa quali persone attorno a sé abbiano gli stessi interessi.
+### Competitor e differenze
 
-L'app vuole offrire un primo punto di contatto: una passione condivisa può diventare un motivo concreto per fare due parole e, nel tempo, costruire un'amicizia.
+Esistono già piattaforme che aiutano a conoscere persone. Abbiamo considerato questi esempi per capire meglio su cosa concentrare HitMeUp.
 
-### A chi si rivolge
+| Competitor | Cosa offre | Su cosa punta HitMeUp |
+| --- | --- | --- |
+| [Tinder](https://www.help.tinder.com/hc/en-us/articles/115004647686-Tinder-Overview) | Una piattaforma di incontri che permette di conoscere persone attraverso profili e match. | Il progetto si concentra sull’amicizia e sulla ricerca di qualcuno con cui condividere un’attività quotidiana. |
+| [BFF di Bumble](https://support.bumblebff.com/hc/en-us/articles/33949872719773-Using-the-Discover-page) | Un’app dedicata alle amicizie, con profili e gruppi legati anche a interessi e posizione. | HitMeUp vuole dare particolare importanza al luogo preciso e al momento: per esempio, cercare chi è nella stessa biblioteca attraverso il check-in. |
+| [Meetup](https://www.meetup.com/about/) | Una piattaforma per trovare gruppi ed eventi legati a interessi comuni. | L’idea di HitMeUp è favorire anche incontri spontanei con chi si trova già vicino, senza dover partire dalla partecipazione a un evento. |
 
-Il progetto si rivolge alle persone che desiderano ampliare il proprio giro sociale, con particolare attenzione ai giovani e agli studenti. Può essere utile a chi è timido, a chi si è trasferito in una nuova città o a chi cerca compagnia per un'attività.
+La particolarità che vogliamo sviluppare è proprio questa: partire dal posto in cui ci si trova e da una passione condivisa per creare un’occasione di conoscenza dal vivo.
 
-### L'idea che lo distingue
 
-Il centro del progetto è l'amicizia basata su **interessi comuni, vicinanza e spontaneità**. HitMeUp non nasce principalmente per gli incontri romantici: vuole aiutare a conoscere persone con cui condividere qualcosa nella vita quotidiana, anche senza organizzare un evento in anticipo.
+## 2. Tabella delle funzionalità
 
-### Mission
+Le tabelle raccolgono 44 funzioni previste: le 24 iniziali e altre 20 per completare accesso, contatti, privacy e aiuto.
 
-Rendere facile e naturale fare nuove amicizie dal vivo, aiutando le persone a superare l'imbarazzo iniziale e a entrare in contatto con chi condivide le stesse passioni.
+**Importanza:** Critica = necessaria per il percorso principale o per i controlli di sicurezza; Alta = importante nella prima versione; Media = da aggiungere dopo la base; Bassa = miglioramento successivo.
 
-### Vision
+**Tempo:** stima di lavoro per una persona. In questa tabella **1 gg corrisponde a 4 ore di lavoro scolastico**. Le durate comprendono la realizzazione della funzione e una prima prova. Non comprendono il collaudo completo, l’integrazione finale e la preparazione dei materiali di consegna.
 
-Diventare un punto di riferimento per i giovani contro l'isolamento sociale, trasformando spazi di studio, locali e luoghi della città in comunità vive, dove le passioni condivise favoriscono nuove amicizie spontanee.
+### Funzionalità iniziali
 
-### Tecnologie previste
+| ID | Azione | Chi | Importanza | Tempo |
+| --- | --- | --- | --- | --- |
+| F01 | Registrazione e creazione del profilo con nome, foto e hobby | Utente non registrato | Critica | 2 gg |
+| F02 | Login con numero di telefono e password | Utente registrato non loggato | Critica | 1 gg |
+| F03 | Modifica di profilo, foto, bio e hobby | Utente loggato | Alta | 1 gg |
+| F04 | Attivazione della posizione attuale o check-in in un luogo | Utente loggato | Alta | 1,5 gg |
+| F05 | Visualizzazione degli utenti vicini sulla mappa, con filtri per hobby e distanza | Utente loggato | Critica | 3 gg |
+| F06 | Invio di un saluto (Wave) a una persona vicina | Utente loggato | Alta | 1 gg |
+| F07 | Chat live dopo l’accettazione del saluto | Utente loggato | Alta | 3 gg |
+| F08 | Segnalazione e blocco di un utente | Utente loggato | Critica | 1,5 gg |
+| F09 | Visualizzazione della homepage e della spiegazione dell’app | Utente generale | Critica | 0,5 gg |
+| F10 | Dashboard di moderazione per utenti e segnalazioni | Admin | Alta | 2 gg |
+| F11 | Gestione dei tag di interesse e delle categorie | Admin | Media | 0,75 gg |
+| F12 | Gestione del consenso GPS e indicazioni per revocarlo nel browser | Utente loggato / Browser o dispositivo | Critica | 0,75 gg |
+| F13 | Accettazione o rifiuto di una richiesta di posizione esatta | Utente loggato | Critica | 1,5 gg |
+| F14 | Invio, accettazione e rifiuto delle richieste di amicizia | Utente loggato | Alta | 2 gg |
+| F15 | Lista degli amici e stato online, se visibile | Utente loggato | Media | 1,5 gg |
+| F16 | Modalità incognito per nascondere temporaneamente posizione e presenza | Utente loggato | Critica | 1 gg |
+| F17 | Ricerca avanzata per username, luogo e interessi | Utente loggato | Media | 1,5 gg |
+| F18 | Moderazione di foto profilo e contenuti segnalati | Admin | Alta | 1,5 gg |
+| F19 | Sospensione temporanea o ban manuale di un account | Admin | Alta | 1 gg |
+| F20 | Registro delle segnalazioni e storico delle azioni di moderazione | Admin | Alta | 1 gg |
+| F21 | Invio di notifiche globali e avvisi di sistema | Admin | Media | 0,75 gg |
+| F22 | Lettura e accettazione dei Termini di Servizio | Utente non registrato | Critica | 0,25 gg |
+| F23 | Sospensione automatica temporanea per bassa reputazione, con revisione | Sistema automatico | Media | 2 gg |
+| F24 | Feedback sull’interazione e Thumbs Down | Utente loggato | Media | 1 gg |
+
+### Le 20 funzionalità aggiunte
+
+| ID | Azione | Chi | Importanza | Tempo |
+| --- | --- | --- | --- | --- |
+| F25 | Logout dall’account | Utente loggato | Alta | 0,25 gg |
+| F26 | Verifica del numero di telefono tramite codice | Utente in registrazione o loggato / Servizio SMS | Alta | 1,5 gg |
+| F27 | Recupero della password dimenticata | Utente registrato non loggato | Alta | 1 gg |
+| F28 | Cambio della password | Utente loggato | Alta | 0,5 gg |
+| F29 | Cambio del numero di telefono con nuova verifica | Utente loggato | Media | 0,75 gg |
+| F30 | Scelta delle informazioni visibili nel profilo e dello stato online | Utente loggato | Alta | 0,75 gg |
+| F31 | Attivazione e disattivazione delle notifiche per categoria | Utente loggato | Media | 0,75 gg |
+| F32 | Centro notifiche con saluti, richieste e avvisi ricevuti | Utente loggato | Media | 1 gg |
+| F33 | Accettazione o rifiuto dei saluti ricevuti | Utente loggato | Alta | 0,75 gg |
+| F34 | Silenziamento di una chat | Utente loggato | Bassa | 0,5 gg |
+| F35 | Annullamento di una richiesta di amicizia ancora in attesa | Utente loggato | Media | 0,5 gg |
+| F36 | Rimozione di una persona dalla lista amici | Utente loggato | Media | 0,5 gg |
+| F37 | Richiesta della posizione esatta a un amico | Utente loggato | Media | 1 gg |
+| F38 | Revoca della condivisione della posizione esatta | Utente loggato | Critica | 0,5 gg |
+| F39 | Apertura della scheda di un utente e degli hobby in comune | Utente loggato | Alta | 0,5 gg |
+| F40 | Fine del check-in quando si lascia un luogo | Utente loggato | Alta | 0,5 gg |
+| F41 | Consultazione dello stato delle proprie segnalazioni | Utente loggato | Media | 0,75 gg |
+| F42 | Cancellazione del proprio account con conferma | Utente loggato | Alta | 1 gg |
+| F43 | Richiesta di revisione di una sospensione | Utente sospeso | Media | 1 gg |
+| F44 | Pagina di aiuto e domande frequenti | Utente generale | Bassa | 0,5 gg |
 
-- **HTML:** struttura delle pagine.
-- **CSS:** stile grafico e adattamento dell'interfaccia ai diversi schermi.
-- **JavaScript:** interazioni e comportamento dell'interfaccia.
+**Totale delle 44 funzioni: 47,5 gg, cioè 190 ore stimate.** La base con priorità Critica richiede 12 gg; le funzioni con priorità Alta aggiungono 20,75 gg. Le funzioni Media e Bassa possono essere distribuite negli sviluppi successivi. Il totale è una stima delle funzioni elencate, non una scadenza garantita.
 
-La tecnologia per il backend, il database e la gestione delle comunicazioni tra gli utenti è ancora da definire. Questa parte dovrà gestire gli account, salvare i profili e gli interessi e individuare le corrispondenze tra le persone presenti nelle vicinanze.
 
-## 2. Tabella
+### Regole per far funzionare insieme le funzioni
 
-*Sezione da completare.*
+- **Saluti e chat:** un Wave non apre subito una conversazione. La chat diventa disponibile dopo l’accettazione del destinatario. La richiesta di amicizia è separata dal saluto.
+- **Posizione:** la mappa mostra una zona approssimativa. La posizione esatta si può chiedere solo a un amico e si vede soltanto se accetta. Il consenso può essere revocato in qualsiasi momento.
+- **GPS e check-in:** chi rifiuta il GPS può scegliere il luogo manualmente. Il permesso GPS del browser è diverso dal consenso a condividere la posizione con un altro utente. La revoca del permesso del browser si effettua nelle sue impostazioni.
+- **Incognito e blocco:** chi attiva l’incognito sparisce dai suggerimenti e interrompe le condivisioni di posizione. Il blocco impedisce nuovi messaggi, richieste, saluti e suggerimenti reciproci.
+- **Feedback e reputazione:** un Thumbs Down non equivale a una violazione accertata. Le regole automatiche devono controllare feedback duplicati o sospetti e applicare una soglia configurabile. Una sospensione automatica è temporanea, ha una motivazione e permette di chiedere una revisione. Il ban definitivo richiede un controllo dell’admin.
+- **Segnalazioni e privacy:** l’utente vede lo stato delle proprie segnalazioni, senza conoscere dati riservati o chi ha inviato segnalazioni su di lui. Il numero di telefono serve per l’account e non compare nel profilo pubblico.
+- **Presenza e stato online:** il check-in termina quando l’utente esce dal luogo o scade la presenza. Lo stato online si mostra soltanto se l’utente lo consente. Cancellare l’amicizia interrompe anche la condivisione della posizione esatta.
 
-## 3. User story
+## 3. Diagrammi UML dei casi d’uso e gerarchie
 
-Le user story descrivono ciò che una persona vuole fare nell'app e il beneficio che si aspetta. Seguono la formula: **«Come [tipo di utente], voglio [azione], per [beneficio]»**.
+Il modello è in **PlantUML**. Per leggerlo su GitHub ci sono le immagini già pronte; per modificarlo ci sono i file `.puml`. I diagrammi sono divisi per argomento e usano gli stessi ID della tabella. Il [sorgente completo](docs/uml/casi_uso_completo.puml) contiene tutte le 44 funzioni in un solo diagramma.
 
-Le storie seguenti rappresentano le funzionalità proposte per HitMeUp. Per ciascuna è indicato un criterio di accettazione, cioè una condizione verificabile per capire se funziona come previsto.
+### Gerarchia degli attori
 
-### US01 — Registrazione
+![Gerarchia degli attori](docs/uml/00_gerarchie.svg)
 
-Come visitatore, voglio creare un account per avere un profilo personale su HitMeUp.
+Un attore specializzato eredita le possibilità del ruolo più generale. La freccia con il triangolo vuoto punta al ruolo generale.
 
-**Criterio di accettazione:** inserendo dati validi e non già associati a un account, posso completare la registrazione; se ci sono errori, l'app mi indica cosa correggere.
+- **Utente generale:** può consultare homepage e aiuto.
+- **Visitatore:** usa l’app senza aver effettuato l’accesso. Comprende chi non è registrato e chi ha un account ma non è loggato.
+- **Utente loggato:** usa le funzioni personali, la ricerca e i contatti.
+- **Admin:** può usare anche le funzioni dell’utente loggato e ha in più gli strumenti di moderazione.
+- **Utente sospeso:** mantiene soltanto le funzioni pubbliche e il canale per chiedere una revisione. Non eredita le funzioni dell’utente loggato.
 
-### US02 — Accesso
+Il **Servizio SMS** e il **Browser/dispositivo** sono attori esterni di supporto. Il **Sistema automatico**, invece, è un esecutore indicato nella tabella: non è un attore esterno di sé stesso. La valutazione della reputazione e la sospensione automatica sono quindi dentro il confine di HitMeUp.
 
-Come utente registrato, voglio accedere al mio account per ritrovare il mio profilo e le mie preferenze.
+Nelle immagini gli attori sono rettangoli con la scritta `«actor»`; i casi d’uso sono ovali. Le linee continue associano un ruolo a una funzione. `«include»` indica una parte sempre necessaria; `«extend»` un comportamento che si aggiunge a una condizione precisa. Il login è una condizione per usare le funzioni riservate: non viene ripetuto come `include` per ogni azione.
 
-**Criterio di accettazione:** con credenziali corrette accedo al mio account; con credenziali errate l'accesso viene rifiutato.
+<details>
+<summary>Codice PlantUML della gerarchia</summary>
 
-### US03 — Profilo personale
+```plantuml
+@startuml
+top to bottom direction
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam usecaseBackgroundColor #F1F6F3
+skinparam usecaseBorderColor #23745C
+skinparam actorBorderColor #17333C
+skinparam packageBorderColor #799C8E
+title HitMeUp - Gerarchia degli attori
+actor "Utente generale" as UG
+actor "Visitatore" as V
+actor "Utente non registrato" as NU
+actor "Utente registrato non loggato" as RNO
+actor "Utente loggato" as UL
+actor "Admin" as AD
+actor "Utente sospeso" as SO
+UG <|-- V
+UG <|-- UL
+UG <|-- SO
+V <|-- NU
+V <|-- RNO
+UL <|-- AD
+note right of SO
+  Solo funzioni pubbliche e richiesta di revisione.
+  Non eredita i permessi dell’utente loggato.
+end note
+@enduml
+```
 
-Come utente, voglio inserire e modificare la mia presentazione per far capire agli altri chi sono.
+</details>
 
-**Criterio di accettazione:** dopo aver salvato una modifica, le informazioni aggiornate compaiono nel mio profilo anche quando lo riapro.
+### Accesso e primo utilizzo
 
-### US04 — Interessi
+![Accesso e primo utilizzo](docs/uml/01_accesso.svg)
 
-Come utente, voglio selezionare e aggiornare i miei hobby per trovare persone con passioni simili alle mie.
+[Sorgente PlantUML](docs/uml/01_accesso.puml)
 
-**Criterio di accettazione:** posso aggiungere o rimuovere interessi; dopo il salvataggio, l'app utilizza la selezione aggiornata per cercare corrispondenze.
+### Profilo e account
 
-### US05 — Geolocalizzazione
+![Profilo e account](docs/uml/02_account.svg)
 
-Come utente, voglio scegliere se autorizzare la geolocalizzazione per cercare persone vicine utilizzando la posizione del dispositivo.
+[Sorgente PlantUML](docs/uml/02_account.puml)
 
-**Criterio di accettazione:** la posizione viene utilizzata solo dopo il mio consenso; se lo nego, posso comunque usare il check-in manuale.
+F26 compare anche qui perché il cambio del numero richiede una nuova verifica. È la stessa funzione del diagramma di accesso.
 
-### US06 — Check-in manuale
+### Luoghi, ricerca e posizione
 
-Come utente, voglio effettuare il check-in in un luogo per indicare dove mi trovo senza utilizzare la geolocalizzazione.
+![Luoghi, ricerca e posizione](docs/uml/03_posizione.svg)
 
-**Criterio di accettazione:** dopo aver selezionato e confermato un luogo, la ricerca considera quel luogo come riferimento; posso annullare il check-in.
+[Sorgente PlantUML](docs/uml/03_posizione.puml)
 
-### US07 — Persone con interessi comuni
+### Saluti, chat e amicizie
 
-Come utente, voglio vedere persone vicine che condividono almeno un mio interesse per trovare qualcuno con cui iniziare una conversazione.
+![Saluti, chat e amicizie](docs/uml/04_social.svg)
 
-**Criterio di accettazione:** ogni risultato rispetta l'area di ricerca prevista e mostra almeno un interesse in comune; se non ci sono corrispondenze, l'app lo comunica chiaramente.
+[Sorgente PlantUML](docs/uml/04_social.puml)
 
-### US08 — Notifiche
+La chat F07 richiede un Wave già accettato tramite F33. L’accettazione avviene prima: non deve ripetersi ogni volta che si riapre la chat.
 
-Come utente, voglio poter ricevere un avviso quando viene rilevata una nuova persona compatibile nelle vicinanze per accorgermi di un'occasione per fare amicizia.
+### Sicurezza e moderazione
 
-**Criterio di accettazione:** con gli avvisi attivi, una nuova corrispondenza genera una notifica nell'app; posso disattivarli dalle impostazioni.
+![Sicurezza e moderazione](docs/uml/05_moderazione.svg)
 
-### US09 — Consultazione di un profilo
+[Sorgente PlantUML](docs/uml/05_moderazione.puml)
 
-Come utente, voglio leggere la presentazione e gli interessi pubblici di una persona suggerita per trovare uno spunto con cui rompere il ghiaccio.
+Il feedback F24 comprende la valutazione della reputazione. La sospensione F23 estende questa valutazione soltanto quando si raggiunge la soglia dopo i controlli. Il passaggio di revisione richiesto dall’utente è F43.
 
-**Criterio di accettazione:** aprendo un risultato, vedo la presentazione, gli interessi condivisi e solo le informazioni che quella persona ha scelto di rendere visibili.
 
-### US10 — Visibilità
+### Come usare i diagrammi su GitHub
 
-Come utente, voglio poter sospendere la mia visibilità per decidere quando essere disponibile a nuove conoscenze.
+Carica il `README.md` insieme alla cartella `docs`, senza cambiarne i percorsi. Le immagini SVG appariranno nelle sezioni qui sopra. Nella cartella sono presenti anche le versioni PNG, i sorgenti PlantUML e i file Graphviz equivalenti usati per le anteprime. I sorgenti PlantUML permettono di rigenerare il modello con la notazione degli attori a omino.
 
-**Criterio di accettazione:** quando disattivo la visibilità, il mio profilo non compare nelle nuove ricerche degli altri utenti; posso riattivarla.
+## 4. User story
 
-### US11 — Blocco di un utente
+Le user story descrivono cosa vogliono fare gli utenti attraverso il sito e perché quella funzione è utile. Ogni storia rimanda alla funzione con lo stesso numero.
 
-Come utente, voglio bloccare una persona con cui non desidero avere contatti per utilizzare l'app con maggiore tranquillità.
+### Accesso e primo utilizzo
 
-**Criterio di accettazione:** dopo il blocco, i due profili non vengono più suggeriti l'uno all'altro e non generano notifiche reciproche.
+**US01 (F01):** Come utente non registrato, voglio registrarmi e creare un profilo, per presentarmi e partecipare alle attività dell’app.
 
-### US12 — Segnalazione
+**US02 (F02):** Come utente, voglio accedere con telefono e password, per ritrovare il mio profilo e i miei contatti.
 
-Come utente, voglio segnalare un profilo o un comportamento inappropriato per contribuire a rendere la comunità più sicura.
+**US09 (F09):** Come visitatore, voglio capire dalla homepage come funziona HitMeUp, per decidere se voglio iscrivermi.
 
-**Criterio di accettazione:** posso indicare un motivo e inviare la segnalazione; il sistema la registra e conferma l'invio.
+**US22 (F22):** Come utente non registrato, voglio leggere e accettare le regole prima di registrarmi, per sapere come utilizzare il servizio.
 
-## 4. Requisiti software
+**US26 (F26):** Come utente, voglio verificare il mio numero con un codice, per dimostrare che il recapito indicato è mio.
 
-*Sezione da completare: requisiti funzionali, non funzionali e di dominio.*
+**US27 (F27):** Come utente, voglio recuperare l’accesso se dimentico la password, per continuare a usare il mio account.
 
-## 5. Analisi SWOT
+**US44 (F44):** Come visitatore, voglio consultare le domande frequenti, per capire le funzioni e risolvere i dubbi più comuni.
 
-L'analisi SWOT aiuta a valutare i vantaggi e i limiti del progetto, distinguendo gli aspetti interni dalle condizioni esterne. Quella seguente è una prima valutazione progettuale, da verificare durante lo sviluppo e con il confronto con gli utenti.
+### Profilo e account
+
+**US03 (F03):** Come utente, voglio aggiornare la mia presentazione e i miei hobby, per far vedere agli altri informazioni aggiornate.
+
+**US25 (F25):** Come utente, voglio uscire dal mio account, per evitare che altre persone lo usino dal mio dispositivo.
+
+**US28 (F28):** Come utente, voglio cambiare la password, per aggiornare la protezione del mio account.
+
+**US29 (F29):** Come utente, voglio aggiornare e verificare il numero di telefono, per mantenere corretto il recapito per l’accesso.
+
+**US30 (F30):** Come utente, voglio scegliere quali informazioni mostrare, per condividere solo ciò che desidero.
+
+**US42 (F42):** Come utente, voglio cancellare il mio account, per smettere di utilizzare il servizio.
+
+**US43 (F43):** Come utente sospeso, voglio chiedere una revisione della sospensione, per far controllare una decisione che ritengo sbagliata.
+
+### Luoghi, ricerca e posizione
+
+**US04 (F04):** Come utente, voglio indicare dove mi trovo con la posizione o il check-in, per cercare persone nel luogo giusto.
+
+**US05 (F05):** Come utente, voglio vedere sulla mappa persone vicine con interessi comuni, per trovare qualcuno con cui condividere un’attività.
+
+**US12 (F12):** Come utente, voglio scegliere se autorizzare il GPS e sapere come revocare il permesso, per controllare l’uso della mia posizione.
+
+**US13 (F13):** Come utente, voglio accettare o rifiutare chi chiede la mia posizione esatta, per decidere con chi condividerla.
+
+**US16 (F16):** Come utente, voglio nascondere temporaneamente la mia presenza, per usare l’account senza comparire sulla mappa.
+
+**US17 (F17):** Come utente, voglio cercare per username, luogo o interesse, per trovare più facilmente un profilo compatibile.
+
+**US37 (F37):** Come utente, voglio chiedere a un amico di condividere la posizione esatta, per trovarlo più facilmente se decide di accettare.
+
+**US38 (F38):** Come utente, voglio interrompere la condivisione della posizione esatta, per tornare a tenerla privata quando voglio.
+
+**US39 (F39):** Come utente, voglio leggere il profilo di una persona suggerita, per trovare un argomento con cui iniziare a parlare.
+
+**US40 (F40):** Come utente, voglio terminare il check-in quando vado via, per non risultare ancora presente nel luogo.
+
+### Saluti, chat e amicizie
+
+**US06 (F06):** Come utente, voglio inviare un saluto, per far capire a una persona che vorrei conoscerla.
+
+**US07 (F07):** Come utente, voglio scrivere nella chat dopo che il saluto è stato accettato, per iniziare una conversazione con il consenso dell’altra persona.
+
+**US14 (F14):** Come utente, voglio gestire le richieste di amicizia, per aggiungere ai miei contatti solo le persone che scelgo.
+
+**US15 (F15):** Come utente, voglio vedere i miei amici e chi risulta online, per sapere con chi posso parlare.
+
+**US31 (F31):** Come utente, voglio scegliere quali notifiche ricevere, per evitare avvisi che non mi interessano.
+
+**US32 (F32):** Come utente, voglio ritrovare gli avvisi ricevuti in un’unica pagina, per non perdere saluti e richieste.
+
+**US33 (F33):** Come utente, voglio accettare o rifiutare un saluto, per decidere con chi iniziare una chat.
+
+**US34 (F34):** Come utente, voglio silenziare una conversazione, per sospendere gli avvisi senza bloccare la persona.
+
+**US35 (F35):** Come utente, voglio annullare una richiesta non ancora accettata, per ritirarla se cambio idea.
+
+**US36 (F36):** Come utente, voglio rimuovere un contatto dagli amici, per gestire liberamente la mia lista.
+
+### Sicurezza e moderazione
+
+**US08 (F08):** Come utente, voglio segnalare o bloccare una persona, per interrompere contatti indesiderati e chiedere un controllo.
+
+**US10 (F10):** Come amministratore, voglio aprire una dashboard di moderazione, per controllare i casi che richiedono un intervento.
+
+**US11 (F11):** Come amministratore, voglio aggiungere o rimuovere categorie di hobby, per mantenere ordinati gli interessi disponibili.
+
+**US18 (F18):** Come amministratore, voglio controllare e rimuovere contenuti inappropriati, per mantenere gli spazi dell’app utilizzabili.
+
+**US19 (F19):** Come amministratore, voglio sospendere o bannare un account dopo un controllo, per intervenire sulle violazioni delle regole.
+
+**US20 (F20):** Come amministratore, voglio consultare lo storico delle segnalazioni e degli interventi, per capire cosa è successo e quali decisioni sono state prese.
+
+**US21 (F21):** Come amministratore, voglio inviare un avviso agli utenti, per comunicare informazioni importanti sull’app.
+
+**US23 (F23):** Come amministratore, voglio che il sistema sospenda temporaneamente gli account che raggiungono la soglia prevista dopo i controlli, per rivedere il caso prima di una decisione definitiva.
+
+**US24 (F24):** Come utente, voglio lasciare un feedback su un’interazione, per segnalare che il contatto non è stato rispettoso.
+
+**US41 (F41):** Come utente, voglio sapere se una mia segnalazione è stata presa in carico, per seguire la richiesta senza vedere dati riservati.
+
+
+## 5. Analisi SWOT di un competitor: BFF di Bumble
+
+Abbiamo scelto **BFF di Bumble** perché è un competitor vicino all’idea di HitMeUp: si rivolge alle amicizie e permette di conoscere persone attraverso profili, interessi e posizione. Offre anche gruppi legati alle passioni condivise.
+
+La SWOT distingue gli aspetti del prodotto dalle condizioni esterne. Le opportunità e le minacce qui sotto sono una nostra valutazione per il progetto scolastico, non dati economici dell’azienda.
 
 | | Aspetti favorevoli | Aspetti sfavorevoli |
 | --- | --- | --- |
-| **Fattori interni** | **Punti di forza — Strengths**<br>• Obiettivo chiaro: favorire amicizie dal vivo.<br>• Interessi comuni come spunto per iniziare una conversazione.<br>• Geolocalizzazione e check-in come modalità alternative.<br>• Idea adatta a situazioni quotidiane, come studio e tempo libero. | **Punti di debolezza — Weaknesses**<br>• Competenze sul backend e sulla comunicazione tra utenti ancora da sviluppare.<br>• Risorse e tempi limitati di un progetto scolastico.<br>• Gestione delicata di posizione, visibilità e dati personali.<br>• Necessità di organizzare la gestione delle segnalazioni. |
-| **Fattori esterni** | **Opportunità — Opportunities**<br>• Possibilità di coinvolgere scuole, università, biblioteche e associazioni.<br>• Occasioni d'uso per chi arriva in una nuova città o in un nuovo ambiente.<br>• Possibili collaborazioni con luoghi dedicati a sport, studio e tempo libero.<br>• Possibilità di far conoscere l'app attraverso gruppi e comunità locali. | **Minacce — Threats**<br>• Concorrenza di social network, app per conoscere persone e piattaforme di eventi.<br>• Pochi utenti attivi nella stessa zona possono limitare le occasioni di incontro.<br>• Diffidenza verso la condivisione della posizione e gli incontri con sconosciuti.<br>• Profili falsi o comportamenti scorretti possono ridurre la fiducia nell'app. |
+| **Fattori interni** | **Punti di forza:** servizio dedicato alle amicizie; profili con interessi; ricerca legata alla posizione; gruppi per conoscere più persone con passioni comuni. | **Punti di debolezza:** serve un profilo completo prima di comparire o cercare persone nella sezione dedicata; il servizio non è disponibile in tutti i Paesi. Sono limiti di accesso da considerare per chi vuole iniziare a usarlo. |
+| **Fattori esterni** | **Opportunità:** persone che cambiano città, scuola o lavoro e cercano nuovi contatti; possibilità di coinvolgere comunità locali e gruppi legati a un hobby. | **Minacce:** concorrenza di altre app e dei gruppi social già utilizzati; difficoltà ad attirare abbastanza utenti nella stessa zona; diffidenza verso i contatti con sconosciuti. |
 
-### Come utilizzare questa analisi
+### Cosa ci serve capire per HitMeUp
 
-Una possibile strategia iniziale è sperimentare HitMeUp in un ambiente circoscritto, come una comunità scolastica, per raccogliere osservazioni e verificare se gli interessi comuni aiutano davvero a iniziare una conversazione. Nello sviluppo sarà necessario dedicare attenzione anche al controllo della visibilità, alla gestione della posizione e agli strumenti di blocco e segnalazione.
+BFF usa già interessi e posizione: queste caratteristiche, da sole, non rendono nuova la nostra idea. Per HitMeUp vogliamo concentrarci sul luogo preciso e sulla disponibilità in quel momento, con un check-in facile da avviare e terminare. Per esempio, scoprire chi è nella stessa biblioteca e cerca compagnia per studiare.
 
-## 6. UML — Diagramma dei casi d'uso
+La prima versione dovrà anche evitare di diventare troppo complicata. Le 44 funzioni rappresentano l’elenco completo: conviene iniziare da quelle essenziali e aggiungere le altre in seguito.
 
-*Sezione da completare.*
+### Fonti per il confronto
+
+- [BFF: persone, interessi, gruppi e posizione](https://support.bumblebff.com/hc/en-us/articles/33949872719773-Using-the-Discover-page).
+- [BFF: profilo completo e ricerca di nuove amicizie](https://support.bumblebff.com/hc/en-us/articles/30291300715421-Making-friends-on-BFF).
+- [BFF: posizione e disponibilità nei diversi Paesi](https://support.bumblebff.com/hc/en-us/articles/30291313014173-Updating-your-location).
+- [Sintassi dei diagrammi dei casi d’uso in PlantUML](https://plantuml.com/use-case-diagram).

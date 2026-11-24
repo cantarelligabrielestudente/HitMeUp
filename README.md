@@ -103,104 +103,8 @@ Le tabelle raccolgono 44 funzioni previste: le 24 iniziali e altre 20 per comple
 - **Segnalazioni e privacy:** l’utente vede lo stato delle proprie segnalazioni, senza conoscere dati riservati o chi ha inviato segnalazioni su di lui. Il numero di telefono serve per l’account e non compare nel profilo pubblico.
 - **Presenza e stato online:** il check-in termina quando l’utente esce dal luogo o scade la presenza. Lo stato online si mostra soltanto se l’utente lo consente. Cancellare l’amicizia interrompe anche la condivisione della posizione esatta.
 
-## 3. Diagrammi UML dei casi d’uso e gerarchie
 
-Il modello è in **PlantUML**. Per leggerlo su GitHub ci sono le immagini già pronte; per modificarlo ci sono i file `.puml`. I diagrammi sono divisi per argomento e usano gli stessi ID della tabella. Il [sorgente completo](docs/uml/casi_uso_completo.puml) contiene tutte le 44 funzioni in un solo diagramma.
-
-### Gerarchia degli attori
-
-![Gerarchia degli attori](docs/uml/00_gerarchie.svg)
-
-Un attore specializzato eredita le possibilità del ruolo più generale. La freccia con il triangolo vuoto punta al ruolo generale.
-
-- **Utente generale:** può consultare homepage e aiuto.
-- **Visitatore:** usa l’app senza aver effettuato l’accesso. Comprende chi non è registrato e chi ha un account ma non è loggato.
-- **Utente loggato:** usa le funzioni personali, la ricerca e i contatti.
-- **Admin:** può usare anche le funzioni dell’utente loggato e ha in più gli strumenti di moderazione.
-- **Utente sospeso:** mantiene soltanto le funzioni pubbliche e il canale per chiedere una revisione. Non eredita le funzioni dell’utente loggato.
-
-Il **Servizio SMS** e il **Browser/dispositivo** sono attori esterni di supporto. Il **Sistema automatico**, invece, è un esecutore indicato nella tabella: non è un attore esterno di sé stesso. La valutazione della reputazione e la sospensione automatica sono quindi dentro il confine di HitMeUp.
-
-Nelle immagini gli attori sono rettangoli con la scritta `«actor»`; i casi d’uso sono ovali. Le linee continue associano un ruolo a una funzione. `«include»` indica una parte sempre necessaria; `«extend»` un comportamento che si aggiunge a una condizione precisa. Il login è una condizione per usare le funzioni riservate: non viene ripetuto come `include` per ogni azione.
-
-<details>
-<summary>Codice PlantUML della gerarchia</summary>
-
-```plantuml
-@startuml
-top to bottom direction
-skinparam backgroundColor white
-skinparam shadowing false
-skinparam defaultFontName Arial
-skinparam usecaseBackgroundColor #F1F6F3
-skinparam usecaseBorderColor #23745C
-skinparam actorBorderColor #17333C
-skinparam packageBorderColor #799C8E
-title HitMeUp - Gerarchia degli attori
-actor "Utente generale" as UG
-actor "Visitatore" as V
-actor "Utente non registrato" as NU
-actor "Utente registrato non loggato" as RNO
-actor "Utente loggato" as UL
-actor "Admin" as AD
-actor "Utente sospeso" as SO
-UG <|-- V
-UG <|-- UL
-UG <|-- SO
-V <|-- NU
-V <|-- RNO
-UL <|-- AD
-note right of SO
-  Solo funzioni pubbliche e richiesta di revisione.
-  Non eredita i permessi dell’utente loggato.
-end note
-@enduml
-```
-
-</details>
-
-### Accesso e primo utilizzo
-
-![Accesso e primo utilizzo](docs/uml/01_accesso.svg)
-
-[Sorgente PlantUML](docs/uml/01_accesso.puml)
-
-### Profilo e account
-
-![Profilo e account](docs/uml/02_account.svg)
-
-[Sorgente PlantUML](docs/uml/02_account.puml)
-
-F26 compare anche qui perché il cambio del numero richiede una nuova verifica. È la stessa funzione del diagramma di accesso.
-
-### Luoghi, ricerca e posizione
-
-![Luoghi, ricerca e posizione](docs/uml/03_posizione.svg)
-
-[Sorgente PlantUML](docs/uml/03_posizione.puml)
-
-### Saluti, chat e amicizie
-
-![Saluti, chat e amicizie](docs/uml/04_social.svg)
-
-[Sorgente PlantUML](docs/uml/04_social.puml)
-
-La chat F07 richiede un Wave già accettato tramite F33. L’accettazione avviene prima: non deve ripetersi ogni volta che si riapre la chat.
-
-### Sicurezza e moderazione
-
-![Sicurezza e moderazione](docs/uml/05_moderazione.svg)
-
-[Sorgente PlantUML](docs/uml/05_moderazione.puml)
-
-Il feedback F24 comprende la valutazione della reputazione. La sospensione F23 estende questa valutazione soltanto quando si raggiunge la soglia dopo i controlli. Il passaggio di revisione richiesto dall’utente è F43.
-
-
-### Come usare i diagrammi su GitHub
-
-Carica il `README.md` insieme alla cartella `docs`, senza cambiarne i percorsi. Le immagini SVG appariranno nelle sezioni qui sopra. Nella cartella sono presenti anche le versioni PNG, i sorgenti PlantUML e i file Graphviz equivalenti usati per le anteprime. I sorgenti PlantUML permettono di rigenerare il modello con la notazione degli attori a omino.
-
-## 4. User story
+## 3. User story
 
 Le user story descrivono cosa vogliono fare gli utenti attraverso il sito e perché quella funzione è utile. Ogni storia rimanda alla funzione con lo stesso numero.
 
@@ -303,7 +207,7 @@ Le user story descrivono cosa vogliono fare gli utenti attraverso il sito e perc
 **US41 (F41):** Come utente, voglio sapere se una mia segnalazione è stata presa in carico, per seguire la richiesta senza vedere dati riservati.
 
 
-## 5. Analisi SWOT di un competitor: BFF di Bumble
+## 4. Analisi SWOT di un competitor: BFF di Bumble
 
 Abbiamo scelto **BFF di Bumble** perché è un competitor vicino all’idea di HitMeUp: si rivolge alle amicizie e permette di conoscere persone attraverso profili, interessi e posizione. Offre anche gruppi legati alle passioni condivise.
 
@@ -320,9 +224,4 @@ BFF usa già interessi e posizione: queste caratteristiche, da sole, non rendono
 
 La prima versione dovrà anche evitare di diventare troppo complicata. Le 44 funzioni rappresentano l’elenco completo: conviene iniziare da quelle essenziali e aggiungere le altre in seguito.
 
-### Fonti per il confronto
 
-- [BFF: persone, interessi, gruppi e posizione](https://support.bumblebff.com/hc/en-us/articles/33949872719773-Using-the-Discover-page).
-- [BFF: profilo completo e ricerca di nuove amicizie](https://support.bumblebff.com/hc/en-us/articles/30291300715421-Making-friends-on-BFF).
-- [BFF: posizione e disponibilità nei diversi Paesi](https://support.bumblebff.com/hc/en-us/articles/30291313014173-Updating-your-location).
-- [Sintassi dei diagrammi dei casi d’uso in PlantUML](https://plantuml.com/use-case-diagram).

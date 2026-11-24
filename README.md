@@ -225,3 +225,21 @@ BFF usa già interessi e posizione: queste caratteristiche, da sole, non rendono
 La prima versione dovrà anche evitare di diventare troppo complicata. Le 44 funzioni rappresentano l’elenco completo: conviene iniziare da quelle essenziali e aggiungere le altre in seguito.
 
 
+## 5. Analisi SWOT della webapp HitMeUp
+
+Dopo aver analizzato un competitor, abbiamo valutato anche la nostra webapp. La SWOT ci aiuta a capire quali aspetti dell’idea possono funzionare, quali difficoltà dobbiamo affrontare e quali condizioni esterne possono favorire o ostacolare il progetto.
+
+HitMeUp è ancora un progetto scolastico: i punti di forza riguardano le caratteristiche previste, da verificare con lo sviluppo e le prove con gli utenti. Le opportunità e le minacce sono possibilità da considerare, non risultati già dimostrati.
+
+| | Aspetti favorevoli | Aspetti sfavorevoli |
+| --- | --- | --- |
+| **Fattori interni** | **Punti di forza (Strengths):** obiettivo chiaro, dedicato alle amicizie e alle attività dal vivo; ricerca basata su hobby, vicinanza e presenza nello stesso luogo; Wave e chat dopo l’accettazione, per facilitare il primo contatto; controlli previsti su visibilità, posizione, blocco e segnalazioni. | **Punti di debolezza (Weaknesses):** utilità legata alla presenza di abbastanza utenti attivi nello stesso luogo e momento; 44 funzioni previste, impegnative da sviluppare e provare in un progetto scolastico; necessità di gestire insieme mappa, chat e aggiornamenti della presenza; lavoro continuo per controllare le segnalazioni e verificare che i sistemi di reputazione non penalizzino utenti senza motivo. |
+| **Fattori esterni** | **Opportunità (Opportunities):** persone che cambiano scuola o città e cercano nuove amicizie; possibili collaborazioni con biblioteche, università, palestre e associazioni; eventi locali in cui proporre l’app a persone già presenti nello stesso posto; passaparola tra studenti e gruppi con interessi comuni. | **Minacce (Threats):** concorrenza di piattaforme e gruppi social già conosciuti; diffidenza verso la condivisione della posizione e gli incontri con sconosciuti; tentativi di creare profili falsi, inviare messaggi indesiderati o abusare delle segnalazioni; possibili costi o limitazioni dei servizi esterni necessari per mappe e verifica tramite SMS. |
+
+### Come usare questa analisi nel progetto
+
+Per la prima versione vogliamo concentrarci sul percorso principale: creare un profilo, scegliere gli hobby, indicare la presenza in un luogo, trovare persone compatibili e inviare un Wave. La chat sarà disponibile dopo l’accettazione. I controlli di privacy, blocco e segnalazione dovranno accompagnare queste funzioni fin dall’inizio.
+
+Una prima prova potrebbe svolgersi in una sola biblioteca o in un ambiente scolastico, coinvolgendo un piccolo gruppo nello stesso periodo. Questo ci permetterebbe di verificare se le persone trovano contatti utili e se capiscono facilmente come utilizzare l’app.
+
+Durante la prova potremmo osservare quanti utenti completano il profilo, quanti trovano almeno una persona con hobby in comune, quanti Wave vengono accettati e quanti utenti tornano a usare il servizio. Anche i problemi segnalati e i tempi di gestione ci aiuterebbero a scegliere cosa migliorare prima di aggiungere altre funzioni.

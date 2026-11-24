@@ -69,11 +69,6 @@ Le tabelle raccolgono 44 funzioni previste: le 24 iniziali e altre 20 per comple
 | F22 | Lettura e accettazione dei Termini di Servizio | Utente non registrato | Critica | 0,25 gg |
 | F23 | Sospensione automatica temporanea per bassa reputazione, con revisione | Sistema automatico | Media | 2 gg |
 | F24 | Feedback sull’interazione e Thumbs Down | Utente loggato | Media | 1 gg |
-
-### Le 20 funzionalità aggiunte
-
-| ID | Azione | Chi | Importanza | Tempo |
-| --- | --- | --- | --- | --- |
 | F25 | Logout dall’account | Utente loggato | Alta | 0,25 gg |
 | F26 | Verifica del numero di telefono tramite codice | Utente in registrazione o loggato / Servizio SMS | Alta | 1,5 gg |
 | F27 | Recupero della password dimenticata | Utente registrato non loggato | Alta | 1 gg |
